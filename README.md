@@ -1,6 +1,10 @@
 # 📄 Smart ATS Resume Checker
 
-This Streamlit app helps job seekers evaluate how well their resume matches a job description using NLP and Google's Gemini API. It extracts relevant keywords from both documents, checks for overlaps, and provides a match score, missing keywords, and a suggested profile summary.
+This Streamlit app helps job seekers evaluate how well their resume matches a job description using NLP. It extracts text from PDF resumes using PyPDF2, then applies TextBlob for Part-of-Speech tagging to identify relevant nouns, verbs, and adjectives.
+
+The app uses lemmatization to convert words to their base forms (e.g., "running" → "run") and filters out common stopwords using scikit-learn's ENGLISH_STOP_WORDS to focus on meaningful keywords. 
+
+Then analyzes the resume against the job description to provide a compatibility percentage, identify missing keywords, and suggest profile summary improvements through Streamlit interface.
 
 ---
 
@@ -73,7 +77,6 @@ smart-ats-checker/
 │
 ├── app.py              # Main Streamlit application
 ├── requirements.txt    # Dependencies
-├── .env                # Your API keys (excluded from Git)
 └── README.md           # Project info
 ```
 
@@ -88,6 +91,3 @@ MIT License. Free to use, modify, and distribute.
 ## 💡 Inspiration
 
 Built to assist job seekers in optimizing their resumes using the power of NLP and LLMs.
-
-ATS RESUME SCANNER
-link: https://ats-resume-scanner.streamlit.app/
