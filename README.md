@@ -27,10 +27,8 @@ This Streamlit app helps job seekers evaluate how well their resume matches a jo
 ---
 
 ## 🖼️ Demo
+(assets/readmeimg.png)
 
-_Add a screenshot here (optional)_
-
----
 
 ## 📦 Installation
 
